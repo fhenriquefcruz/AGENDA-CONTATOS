@@ -1,0 +1,47 @@
+<mvc:View
+   controllerName="sap.ui.demo.walkthrough.controller.HelloPanel"
+   xmlns="sap.m"
+   xmlns:mvc="sap.ui.core.mvc">
+   <Panel
+      headerText="{i18n>helloPanelTitle}"
+      class="sapUiResponsiveMargin"
+      width="auto" >
+      <content>
+        <Button
+            text="Nome"/>
+            <Input type = "text" id = "txtNome"
+             width="23%"/>
+              </content>
+      <content>
+      <Button 
+      text="Sobrenome"/>
+      <Input type="text" id = "txtSobrenome"       
+            width="20%"/>
+           <FormattedText
+            class="sapUiSmallMargin sapThemeHighlight-asColor myCustomText"/>
+      </content>
+      <content>
+            <Button
+      text="Telefone"/>
+      <Input type="text" id = "txtTelefone"  
+            width="21.5%"            />
+            </content>
+    <content>
+      <Button 
+      text="E-mail"/>
+      <Input type="text" id = "txtEmail"  
+             width="22.9%"/>
+           <FormattedText
+              htmlText=" {/recipient/email}"
+              class="sapUiSmallMargin sapThemeHighlight-asColor myCustomText"/>
+      </content>
+       <Button
+            text = "Cadastrar Contato"
+            icon="sap-icon://account"
+            press=".onShowHello"
+            class="sapUiSmallMarginEnd"
+            onclick="salvarContato();"/>
+            
+      </Panel>
+     
+</mvc:View>
